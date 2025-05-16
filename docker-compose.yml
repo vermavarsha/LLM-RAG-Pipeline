@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  rag-app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./chroma_store:/app/chroma_store
+    environment:
+      - OPENAI_API_KEY=  #plz write your own api
+    restart: always
