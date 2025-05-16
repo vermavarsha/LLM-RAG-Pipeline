@@ -12,50 +12,27 @@ This project allows users to upload documents and ask questions about their cont
 ## 🛠️ Setup Instructions
 
 1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourname/rag-pipeline.git
-   cd rag-pipeline
+    git clone https://github.com/vermavarsha/LLM-RAG-Pipeline.git
+    cd LLM-RAG-Pipeline
+ 
+3. Add your OpenAI key:
 
-Add your OpenAI key:
+   Set environment variable OPENAI_API_KEY.
 
-Set environment variable OPENAI_API_KEY.
+4. Build and run:
+   docker-compose up --build
 
-Build and run:
-
-bash
-Copy
-Edit
-docker-compose up --build
 📌 API Usage
 Upload Document
-
-bash
-Copy
-Edit
-POST /upload
-Form-data: file=<PDF file>
+   POST /upload
+   Form-data: file=<PDF file>
 Query Document
-
-bash
-Copy
-Edit
-POST /query
-Form-data: user_query=your question
+   POST /query
+   Form-data: user_query=your question
 Get Metadata
-
-bash
-Copy
-Edit
-GET /metadata
-🔁 LLM Configuration
-To switch between providers:
-
-Replace ask_llm() in llm_client.py with other APIs like Gemini or HuggingFace.
-
-Add required auth keys in docker-compose.yml.
+   GET /metadata
 
 ✅ Testing
-bash
-Copy
-Edit
-pytest
+Install dependencies locally or use Docker:
+  pip install -r requirements.txt
+  pytest
