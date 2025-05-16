@@ -22,7 +22,8 @@ This project allows users to upload documents and ask questions about their cont
 4. Build and run:
    docker-compose up --build
 
-##📌 API Usage
+## 📌 API Usage
+
 Upload Document
    POST /upload
    Form-data: file=<PDF file>
@@ -32,7 +33,8 @@ Query Document
 Get Metadata
    GET /metadata
 
-##✅ Testing
+## ✅ Testing
+
 Install dependencies locally or use Docker:
   pip install -r requirements.txt
   pytest
