@@ -22,19 +22,23 @@ This project allows users to upload documents and ask questions about their cont
 4. Build and run:
    docker-compose up --build
 
+   It run on-
+   http://localhost:8000/docs#/
+
 ## 📌 API Usage
 
-Upload Document
+Upload Document:
    POST /upload
    Form-data: file=<PDF file>
-Query Document
+Query Document:
    POST /query
    Form-data: user_query=your question
-Get Metadata
+Get Metadata:
    GET /metadata
 
 ## ✅ Testing
 
 Install dependencies locally or use Docker:
   pip install -r requirements.txt
+  
   pytest
