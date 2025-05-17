@@ -23,16 +23,20 @@ This project allows users to upload documents and ask questions about their cont
    docker-compose up --build
 
    It run on-
-   http://localhost:8000/docs#/
+   http://localhost:8000
 
 ## 📌 API Usage
 
 Upload Document:
    POST /upload
+   
    Form-data: file=<PDF file>
+   
 Query Document:
    POST /query
+   
    Form-data: user_query=your question
+   
 Get Metadata:
    GET /metadata
 
